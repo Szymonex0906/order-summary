@@ -1,0 +1,162 @@
+/* ### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+
+body {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--pale-blue);
+    font-family: 'Inter', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+    width:28rem;
+    border-radius:1rem;
+    height: 45rem;
+    background:#fff;
+    overflow: hidden;
+} 
+
+.content {
+    width:100%;
+    height:auto;
+    text-align: center;
+    padding:3rem;
+}
+
+h1 {
+    color:var(--dark-blue);
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+}
+
+.content > p:nth-of-type(1) {
+    color:var(--desaturated-blue);
+    line-height: 1.5rem;
+}
+
+.plan {
+    background:var(--very-pale-blue);
+    display:flex;
+    padding:1.5rem;
+    border-radius: 0.5rem;;
+    align-items: center;
+    margin:2rem 0;
+}
+
+.item {
+    margin-left:1rem;
+    text-align: left;
+}
+
+.item h3 {
+    color:var(--dark-blue);
+}
+
+.item p {
+    color:var(--desaturated-blue);
+    margin-top:0.4rem;
+    font-weight: 500;
+}
+
+.plan a {
+    margin-left:4rem;
+    color:var(--bright-blue);
+    font-weight: 700;
+}
+
+.plan a:hover {
+    transition: 250ms ease;
+    text-decoration: none;
+    color:var(--desaturated-blue);
+}
+
+.content input {
+    background:var(--bright-blue);
+    color:var(--very-pale-blue);
+    width: 100%;
+    height:3rem;
+    font-weight: 900;
+    border-radius: 0.7rem;
+    margin-bottom:2rem;
+}
+
+.content input:hover{
+    background:var(--desaturated-blue);
+    transition: 250ms ease;
+}
+
+.content > a {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+}
+
+.content > a:hover {
+    transition: 250ms ease;
+    color:var(--dark-blue);
+}
+
+@media (max-width:375px) {
+    .container {
+    height:37.5rem;
+    width: 90vw;
+    }
+
+    .container > img {
+        width: 100%;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+
+    .plan {
+        padding:1rem;
+        font-size: 0.8rem;
+    }
+
+    .item p{
+        margin-top: 0.2rem;
+    }
+
+    .plan a {
+        margin-left:2rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+}
